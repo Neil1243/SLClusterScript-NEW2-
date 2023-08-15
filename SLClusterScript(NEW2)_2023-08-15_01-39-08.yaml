@@ -1,0 +1,296 @@
+COSMOLOGY:
+  PARAMETERS:
+    H0: 70
+    Om0: 0.3
+DATASET:
+  NAME: MyDeeplenstronomyDataset
+  PARAMETERS:
+    OUTDIR: MySimulationResults
+    SIZE: 1000
+GEOMETRY:
+  CONFIGURATION_1:
+    NAME: CONFIG_1
+    PLANE_1:
+      OBJECT_1: LENS
+      PARAMETERS:
+        REDSHIFT: 0.2
+        center_x: !!python/object/apply:numpy.core.multiarray.scalar
+        - &id001 !!python/object/apply:numpy.dtype
+          args:
+          - f8
+          - false
+          - true
+          state: !!python/tuple
+          - 3
+          - <
+          - null
+          - null
+          - null
+          - -1
+          - -1
+          - 0
+        - !!binary |
+          SPb0ZAiRpb8=
+        center_y: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          akaJiwYluT8=
+    PLANE_2:
+      OBJECT_1: SOURCE
+      OBJECT_2: AGN
+      PARAMETERS:
+        REDSHIFT: 0.7
+  CONFIGURATION_10:
+    NAME: CONFIG_10
+    PLANE_1:
+      OBJECT_1: LENS
+      PARAMETERS:
+        REDSHIFT: 0.2
+        center_x: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          lFClGp1Jtr8=
+        center_y: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          GJ5QpP76tz8=
+    PLANE_2:
+      OBJECT_1: SOURCE
+      OBJECT_2: AGN
+      PARAMETERS:
+        REDSHIFT: 0.7
+  CONFIGURATION_2:
+    NAME: CONFIG_2
+    PLANE_1:
+      OBJECT_1: LENS
+      PARAMETERS:
+        REDSHIFT: 0.2
+        center_x: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          lFClGp1Jtr8=
+        center_y: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          GJ5QpP76tz8=
+    PLANE_2:
+      OBJECT_1: SOURCE
+      OBJECT_2: AGN
+      PARAMETERS:
+        REDSHIFT: 0.7
+  CONFIGURATION_3:
+    NAME: CONFIG_3
+    PLANE_1:
+      OBJECT_1: LENS
+      PARAMETERS:
+        REDSHIFT: 0.2
+        center_x: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          3ZWCcpo4tr8=
+        center_y: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          Jz4ep6lffL8=
+    PLANE_2:
+      OBJECT_1: SOURCE
+      OBJECT_2: AGN
+      PARAMETERS:
+        REDSHIFT: 0.7
+  CONFIGURATION_4:
+    NAME: CONFIG_4
+    PLANE_1:
+      OBJECT_1: LENS
+      PARAMETERS:
+        REDSHIFT: 0.2
+        center_x: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          7zYSsaposD8=
+        center_y: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          zthUQWgEuD8=
+    PLANE_2:
+      OBJECT_1: SOURCE
+      OBJECT_2: AGN
+      PARAMETERS:
+        REDSHIFT: 0.7
+  CONFIGURATION_5:
+    NAME: CONFIG_5
+    PLANE_1:
+      OBJECT_1: LENS
+      PARAMETERS:
+        REDSHIFT: 0.2
+        center_x: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          SPb0ZAiRpb8=
+        center_y: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          akaJiwYluT8=
+    PLANE_2:
+      OBJECT_1: SOURCE
+      OBJECT_2: AGN
+      PARAMETERS:
+        REDSHIFT: 0.7
+  CONFIGURATION_6:
+    NAME: CONFIG_6
+    PLANE_1:
+      OBJECT_1: LENS
+      PARAMETERS:
+        REDSHIFT: 0.2
+        center_x: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          lFClGp1Jtr8=
+        center_y: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          GJ5QpP76tz8=
+    PLANE_2:
+      OBJECT_1: SOURCE
+      OBJECT_2: AGN
+      PARAMETERS:
+        REDSHIFT: 0.7
+  CONFIGURATION_7:
+    NAME: CONFIG_7
+    PLANE_1:
+      OBJECT_1: LENS
+      PARAMETERS:
+        REDSHIFT: 0.2
+        center_x: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          3ZWCcpo4tr8=
+        center_y: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          Jz4ep6lffL8=
+    PLANE_2:
+      OBJECT_1: SOURCE
+      OBJECT_2: AGN
+      PARAMETERS:
+        REDSHIFT: 0.7
+  CONFIGURATION_8:
+    NAME: CONFIG_8
+    PLANE_1:
+      OBJECT_1: LENS
+      PARAMETERS:
+        REDSHIFT: 0.2
+        center_x: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          7zYSsaposD8=
+        center_y: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          zthUQWgEuD8=
+    PLANE_2:
+      OBJECT_1: SOURCE
+      OBJECT_2: AGN
+      PARAMETERS:
+        REDSHIFT: 0.7
+  CONFIGURATION_9:
+    NAME: CONFIG_9
+    PLANE_1:
+      OBJECT_1: LENS
+      PARAMETERS:
+        REDSHIFT: 0.2
+        center_x: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          SPb0ZAiRpb8=
+        center_y: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          akaJiwYluT8=
+    PLANE_2:
+      OBJECT_1: SOURCE
+      OBJECT_2: AGN
+      PARAMETERS:
+        REDSHIFT: 0.7
+IMAGE:
+  PARAMETERS:
+    ccd_gain: 6.083
+    exposure_time: 90
+    numPix: 100
+    pixel_scale: 0.263
+    psf_type: GAUSSIAN
+    read_noise: 7
+SPECIES:
+  GALAXY_1:
+    LIGHT_PROFILE_1:
+      NAME: SERSIC_ELLIPSE
+      PARAMETERS:
+        R_sersic: 10
+        center_x: 0.0
+        center_y: 0.0
+        e1: 0.2
+        e2: -0.1
+        magnitude: 19.5
+        n_sersic: 4
+    MASS_PROFILE_1:
+      NAME: SIE
+      PARAMETERS:
+        center_x: 0.0
+        center_y: 0.0
+        e1: 0.1
+        e2: -0.1
+        theta_E: 1.0
+    NAME: LENS
+    SHEAR_PROFILE_1:
+      NAME: SHEAR
+      PARAMETERS:
+        gamma1: 0.08
+        gamma2: 0.01
+  GALAXY_2:
+    LIGHT_PROFILE_1:
+      NAME: SERSIC_ELLIPSE
+      PARAMETERS:
+        R_sersic: 6
+        center_x: 0.0
+        center_y: 0.0
+        e1: 0.2
+        e2: -0.1
+        magnitude: 21.5
+        n_sersic: 5
+    MASS_PROFILE_1:
+      NAME: SIE
+      PARAMETERS:
+        center_x: 0.0
+        center_y: 0.0
+        e1: 0.1
+        e2: -0.1
+        theta_E: 1.0
+    NAME: SOURCE
+    POINTSOURCE_1:
+      HOST: SOURCE
+      NAME: AGN
+      PARAMETERS:
+        magnitude: 16
+    POINTSOURCE_2:
+      HOST: SOURCE
+      NAME: SUPERNOVA
+      PARAMETERS:
+        magnitude: 21.0
+        sep: 2.0
+        sep_unit: arcsec
+    POINTSOURCE_3:
+      HOST: Foreground
+      NAME: STAR
+      PARAMETERS:
+        magnitude: 14.0
+    SHEAR_PROFILE_1:
+      NAME: SHEAR
+      PARAMETERS:
+        gamma1: 0.08
+        gamma2: 0.01
+SURVEY:
+  PARAMETERS:
+    BANDS: g,r,i,z,Y
+    magnitude_zero_point: 30.0
+    num_exposures: 10
+    seeing: 0.9
+    sky_brightness: 23.5

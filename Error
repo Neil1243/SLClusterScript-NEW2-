@@ -1,0 +1,94 @@
+---------------------------------------------------------------------------
+ConstructorError                          Traceback (most recent call last)
+Cell In[9], line 1
+----> 1 data = dl.make_dataset(config, verbose=True)
+
+File ~/miniconda3/lib/python3.10/site-packages/deeplenstronomy/deeplenstronomy.py:315, in make_dataset(config, dataset, save_to_disk, store_in_memory, verbose, store_sample, image_file_format, survey, return_planes, skip_image_generation, solve_lens_equation)
+    313     if not _check_survey(survey):
+    314         raise RuntimeError("survey={0} is not a valid survey.".format(survey))
+--> 315     parser = Parser(config, survey=survey)
+    316     dataset.config_dict = parser.config_dict
+    318 # store parser
+
+File ~/miniconda3/lib/python3.10/site-packages/deeplenstronomy/input_reader.py:44, in Parser.__init__(self, config, survey)
+     41     config = self.write_survey(config, survey)
+     43 # Read main configuration file
+---> 44 self.full_dict = self.read(config)
+     46 # If the main file points to any input files, read those too
+     47 self._get_input_locations()
+
+File ~/miniconda3/lib/python3.10/site-packages/deeplenstronomy/input_reader.py:150, in Parser.read(self, config)
+    139 """
+    140 Reads config file into a dictionary and returns it.
+    141 
+   (...)
+    146     config_dict (dict): Dictionary containing config information.
+    147 """
+    149 with open(config, 'r') as config_file_obj:
+--> 150     config_dict = yaml.safe_load(config_file_obj)
+    152 return config_dict
+
+File ~/miniconda3/lib/python3.10/site-packages/yaml/__init__.py:125, in safe_load(stream)
+    117 def safe_load(stream):
+    118     """
+    119     Parse the first YAML document in a stream
+    120     and produce the corresponding Python object.
+   (...)
+    123     to be safe for untrusted input.
+    124     """
+--> 125     return load(stream, SafeLoader)
+
+File ~/miniconda3/lib/python3.10/site-packages/yaml/__init__.py:81, in load(stream, Loader)
+     79 loader = Loader(stream)
+     80 try:
+---> 81     return loader.get_single_data()
+     82 finally:
+     83     loader.dispose()
+
+File ~/miniconda3/lib/python3.10/site-packages/yaml/constructor.py:51, in BaseConstructor.get_single_data(self)
+     49 node = self.get_single_node()
+     50 if node is not None:
+---> 51     return self.construct_document(node)
+     52 return None
+
+File ~/miniconda3/lib/python3.10/site-packages/yaml/constructor.py:60, in BaseConstructor.construct_document(self, node)
+     58     self.state_generators = []
+     59     for generator in state_generators:
+---> 60         for dummy in generator:
+     61             pass
+     62 self.constructed_objects = {}
+
+File ~/miniconda3/lib/python3.10/site-packages/yaml/constructor.py:413, in SafeConstructor.construct_yaml_map(self, node)
+    411 data = {}
+    412 yield data
+--> 413 value = self.construct_mapping(node)
+    414 data.update(value)
+
+File ~/miniconda3/lib/python3.10/site-packages/yaml/constructor.py:218, in SafeConstructor.construct_mapping(self, node, deep)
+    216 if isinstance(node, MappingNode):
+    217     self.flatten_mapping(node)
+--> 218 return super().construct_mapping(node, deep=deep)
+
+File ~/miniconda3/lib/python3.10/site-packages/yaml/constructor.py:143, in BaseConstructor.construct_mapping(self, node, deep)
+    140     if not isinstance(key, collections.abc.Hashable):
+    141         raise ConstructorError("while constructing a mapping", node.start_mark,
+    142                 "found unhashable key", key_node.start_mark)
+--> 143     value = self.construct_object(value_node, deep=deep)
+    144     mapping[key] = value
+    145 return mapping
+
+File ~/miniconda3/lib/python3.10/site-packages/yaml/constructor.py:100, in BaseConstructor.construct_object(self, node, deep)
+     98             constructor = self.__class__.construct_mapping
+     99 if tag_suffix is None:
+--> 100     data = constructor(self, node)
+    101 else:
+    102     data = constructor(self, tag_suffix, node)
+
+File ~/miniconda3/lib/python3.10/site-packages/yaml/constructor.py:427, in SafeConstructor.construct_undefined(self, node)
+    426 def construct_undefined(self, node):
+--> 427     raise ConstructorError(None, None,
+    428             "could not determine a constructor for the tag %r" % node.tag,
+    429             node.start_mark)
+
+ConstructorError: could not determine a constructor for the tag 'tag:yaml.org,2002:python/object/apply:numpy.core.multiarray.scalar'
+  in "/Users/neilkumar/Desktop/DeepSkies/SLClusterScript(NEW2)yaml_config_files/SLClusterScript(NEW2)_2023-08-15_01-39-08.yaml", line 17, column 19
